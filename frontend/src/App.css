@@ -1,42 +1,164 @@
+body {
+  margin: 0;
+  background-color: #121212;
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+}
+
 #root {
-  max-width: 1280px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 2rem;
+}
+
+.container {
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.build-container {
+  margin-top: 2rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* SELECTOR PERSONAJE */
+
+select {
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 1rem;
+  font-size: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* ESTADÍSTICAS */
+
+.stats-card {
+  background: #1f1f1f;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 400px;
 }
 
-.card {
-  padding: 2em;
+/* SLOTS */
+
+.slots {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
-.read-the-docs {
-  color: #888;
+.slot {
+  width: 120px;
+  height: 120px;
+
+  border: 2px solid #444;
+  border-radius: 12px;
+
+  background: #202020;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.slot:hover {
+  border-color: #666;
+}
+
+/* OBJETOS DISPONIBLES */
+
+.object-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.mini-card {
+  width: 220px;
+
+  background: #1f1f1f;
+  border: 1px solid #333;
+
+  border-radius: 12px;
+
+  padding: 1rem;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.mini-card:hover {
+  transform: translateY(-5px);
+  border-color: #888;
+}
+
+.mini-card strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+hr {
+  margin: 2rem 0;
+  border-color: #333;
+}
+
+button {
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.build-layout {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.left-panel {
+  background: #1b1b1b;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.right-panel {
+  background: #1b1b1b;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.rareza-comun {
+  border-left: 6px solid #808080;
+}
+
+.rareza-raro {
+  border-left: 6px solid #2196f3;
+}
+
+.rareza-epico {
+  border-left: 6px solid #9c27b0;
+}
+
+.rareza-legendario {
+  border-left: 6px solid #ff9800;
 }

@@ -17,15 +17,19 @@ require_once '../config/db.php';
 
 try {
     $sql = "
-        SELECT 
+        SELECT
             objetos.id,
             objetos.nombre,
             objetos.descripcion,
             objetos.rareza,
             objetos.nivel_requerido,
+            objetos.ataque,
+            objetos.defensa,
+            objetos.vida,
             categorias.nombre AS categoria
         FROM objetos
-        INNER JOIN categorias ON objetos.categoria_id = categorias.id
+        INNER JOIN categorias
+            ON objetos.categoria_id = categorias.id
     ";
 
     $stmt = $conexion->prepare($sql);
